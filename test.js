@@ -1,5 +1,27 @@
 var test = require('tape');
-var contains = require('2d-polygon-contains-polygon');
+var contains = require('./2d-polygon-contains-polygon');
+
+
+test('not contained', function (t) {
+  var a = [
+    [0, 0],
+    [10, 0],
+    [10, 10],
+    [0, 10]
+  ];
+
+  var b = [
+    [20, 20],
+    [80, 20],
+    [80, 80],
+    [20, 80]
+  ];
+
+
+  t.ok(!contains(a, b))
+
+  t.end()
+});
 
 
 test('squares', function (t) {
