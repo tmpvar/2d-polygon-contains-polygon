@@ -17,12 +17,30 @@ test('not contained', function (t) {
     [20, 80]
   ];
 
-
-  t.ok(!contains(a, b))
+  t.equal(contains(a, b), false)
 
   t.end()
 });
 
+test('not contained (overlapping)', function (t) {
+  var a = [
+    [0, 0],
+    [10, 0],
+    [10, 10],
+    [0, 10]
+  ];
+
+  var b = [
+    [5, 5],
+    [11, 5],
+    [11, 11],
+    [5, 11]
+  ];
+
+  t.equal(contains(a, b), false)
+
+  t.end()
+});
 
 test('squares', function (t) {
   var a = [
@@ -38,7 +56,6 @@ test('squares', function (t) {
     [80, 80],
     [20, 80]
   ];
-
 
   t.ok(contains(a, b))
 
