@@ -17,9 +17,9 @@ test('not contained', function (t) {
     [20, 80]
   ];
 
-  t.equal(contains(a, b), false)
+  t.equal(contains(a, b), false);
 
-  t.end()
+  t.end();
 });
 
 test('not contained (overlapping)', function (t) {
@@ -37,9 +37,9 @@ test('not contained (overlapping)', function (t) {
     [5, 11]
   ];
 
-  t.equal(contains(a, b), false)
+  t.equal(contains(a, b), false);
 
-  t.end()
+  t.end();
 });
 
 test('squares', function (t) {
@@ -57,7 +57,72 @@ test('squares', function (t) {
     [20, 80]
   ];
 
-  t.ok(contains(a, b))
+  t.ok(contains(a, b));
 
-  t.end()
+  t.end();
 });
+
+
+test('overlap but not contained (big area)', function (t) {
+  var a = [
+    [0, 0],
+    [10, 0],
+    [10, 10],
+    [0, 10]
+  ];
+
+  var b = [
+    [2, -2],
+    [8, -2],
+    [8, 12],
+    [2, 12]
+  ];
+
+  t.ok(!contains(a, b));
+
+  t.end();
+});
+
+test('overlap but not contained (smaller area)', function (t) {
+  var a = [
+    [0, 0],
+    [10, 0],
+    [10, 10],
+    [0, 10]
+  ];
+
+  var b = [
+    [2, -1],
+    [3, -1],
+    [3, 11],
+    [2, 11]
+  ];
+
+  t.ok(!contains(a, b))
+
+  t.end();
+});
+
+test('intersection', function (t) {
+  var a = [
+    [0, 0],
+    [0, 20],
+    [10, 20],
+    [20, 10],
+    [30, 20],
+    [40, 20],
+    [40, 0]
+  ];
+
+  var b = [
+    [5, 15],
+    [35, 15],
+    [35, 5],
+    [5, 5]
+  ];
+
+  t.ok(!contains(a, b))
+
+  t.end();
+});
+
