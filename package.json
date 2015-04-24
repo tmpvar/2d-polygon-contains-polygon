@@ -1,6 +1,6 @@
 {
   "name": "2d-polygon-contains-polygon",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "test if a polygon completely contains another polygon",
   "main": "2d-polygon-contains-polygon.js",
   "dependencies": {
