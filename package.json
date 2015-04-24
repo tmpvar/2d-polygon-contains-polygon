@@ -1,0 +1,33 @@
+{
+  "name": "2d-polygon-contains-polygon",
+  "version": "0.0.0",
+  "description": "test if a polygon completely contains another polygon",
+  "main": "2d-polygon-contains-polygon.js",
+  "dependencies": {
+    "2d-polygon-area": "^1.0.0",
+    "robust-point-in-polygon": "^1.0.3",
+    "robust-segment-intersect": "^1.0.1",
+    "tape": "^4.0.0"
+  },
+  "devDependencies": {
+    "tape": "^4.0.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tmpvar/2d-polygon-contains-polygon.git"
+  },
+  "keywords": [
+    "polygon",
+    "containment",
+    "2d"
+  ],
+  "author": "Elijah Insua <tmpvar@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tmpvar/2d-polygon-contains-polygon/issues"
+  },
+  "homepage": "https://github.com/tmpvar/2d-polygon-contains-polygon"
+}
